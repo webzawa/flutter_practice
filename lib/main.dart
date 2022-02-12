@@ -70,31 +70,21 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        appBar: AppBar(
-            // Here we take the value from the MyHomePage object that was created by
-            // the App.build method, and use it to set our appbar title.
-            title: Row(
-          children: [
-            Icon(Icons.create),
-            Text("Title"),
-          ],
-        )),
-        drawer: Drawer(child: Center(child: Text("Drawer"))),
-        body: Column(
-          children: [
-            Text("初めてのテキスト"),
-            Text("2"),
-            TextButton(
-                onPressed: () => {print("button pushed")}, child: Text("更新")),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.favorite, color: Colors.pink, size: 24.0),
-                Icon(Icons.audiotrack, color: Colors.green, size: 30.0),
-                Icon(Icons.beach_access, color: Colors.blue, size: 36.0),
-              ],
-            )
-          ],
-        ));
+      appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Row(
+        children: [
+          Icon(Icons.create),
+          Text("Title"),
+        ],
+      )),
+      drawer: Drawer(child: Center(child: Text("Drawer"))),
+      body: Text("初めてのテキスト"),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => {print("you pushed?")},
+        child: Icon(Icons.timer),
+      ),
+    );
   }
 }
