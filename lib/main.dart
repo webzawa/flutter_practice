@@ -59,20 +59,18 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
+              key: Key("counter"),
               style: Theme.of(context).textTheme.headline4,
             ),
             Text(
               '$_type',
               style: TextStyle(fontSize: 20, color: Colors.red),
-            ),
-            if (_counter % 2 == 0)
-              Text('even', style: TextStyle(fontSize: 20, color: Colors.red)),
-            if (_counter % 2 == 1)
-              Text('odd', style: TextStyle(fontSize: 20, color: Colors.red))
+            )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        key: Key("increment"),
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
